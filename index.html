@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Colección organizada de componentes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <header>
+    <h1 class="class1">Colección organizada de componentes</h1>
+  </header>
+
+
+  <main id="contenedor">
+
+
+    <section>
+      <h2>Botones</h2>
+      <p>Botones con estados hover, disable y estilos primario/secundario:</p>
+
+      <ul>
+        <li><button class="btn btn-primary">Botón Primario</button></li>
+        <li><button class="btn btn-secondary">Botón Secundario</button></li>
+        <li><button class="btn btn-primary" disabled>Botón Deshabilitado</button></li>
+      </ul>
+    </section>
+
+
+
+    <section>
+      <h2>Tarjetas de Contenido</h2>
+
+      <div class="card">
+        <img src="Captura de pantalla (789).png" alt="Imagen de tarjeta">
+        
+        <div class="card-body">
+          <h3 class="card-title">Título de la Tarjeta</h3>
+          <p class="card-text">
+            Este es un ejemplo de tarjeta de contenido. Puedes modificar el texto o la imagen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section>
+      <h2>Campos de Formulario</h2>
+      <p>Inputs, selects y checkboxes:</p>
+
+      <form>
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+        </div>
+
+        <div class="form-group">
+          <label for="pais">País:</label>
+          <select id="pais" name="pais">
+            <option value="ecuador">Ecuador</option>
+            <option value="spain">España</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="acepto">Aceptar términos:</label>
+          <input type="checkbox" id="acepto" name="acepto">
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+    </section>
+
+
+    <section>
+      <h2>Navbar Responsivo</h2>
+      <p>Incluye menú hamburguesa para pantallas pequeñas:</p>
+
+      <nav class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        <div class="menu">
+          <a href="#">Inicio</a>
+          <a href="#">Servicios</a>
+          <a href="#">Contacto</a>
+        </div>
+      </nav>
+    </section>
+
+
+
+    <section>
+      <h2>Modal</h2>
+      <p>Ventana emergente con animación:</p>
+
+      <button class="btn btn-secondary" onclick="openModal()">Abrir Modal</button>
+
+      <div class="modal" id="myModal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">×</span>
+          <p>Contenido del modal...</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section>
+      <h2>Tooltip</h2>
+      <p>Información adicional al pasar el mouse:</p>
+
+      <span class="tooltip">
+        Más información
+        <span class="tooltip-text">Este es un tooltip avanzado.</span>
+      </span>
+    </section>
+
+
+    <section>
+      <h2>Contenedor adicional</h2>
+      <div class="contenedor">
+        <p>Este es el contenido dentro de un contenedor con espacio vertical en el interior.</p>
+      </div>
+
+      <span>Un span suelto</span>
+    </section>
+
+  </main>
+
+
+
+  <footer class="text-center mt-3">
+    <h3>JUAN SÁNCHEZ TI "A" — 5to Semestre</h3>
+    <p>Proyecto académico de componentes y CSS avanzado</p>
+  </footer>
+
+
+
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function openModal() {
+      document.getElementById('myModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
